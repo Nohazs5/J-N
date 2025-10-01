@@ -1,0 +1,21 @@
+* {
+    margin: 1;
+    padding: 1;
+    box-sizing: border-box;
+    color: black;
+}
+
+
+.suse-mono-title {
+  font-family: "SUSE Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.suse-mono-paragraph {
+  font-family: "SUSE Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
