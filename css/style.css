@@ -1,38 +1,72 @@
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: black;
-    font-family: "SUSE Mono";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav ul {display: none;}
+body {
+  font-family: "Poppins", "SUSE Mono", sans-serif;
+  background-color: #D9E9CF;
+  color: #000000;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: linear-gradient(90deg, #96A78D, #B6CEB4);
+  border-bottom: 3px solid #96A78D;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* LOGO */
+#logoHead img {
+  width: 120px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* NAV */
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
 nav ul li {
-    display: inline;
-    margin: 0.5em;
-    font-size: 1em;}
-nav ul li a {color: black; background: transparent; font-weight: bold; padding: 0 10px; text-decoration: none;}
-nav ul li a:hover {color: #96A78D ; text-decoration: none;}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    align-items: center;
+  border: 1.5px solid #96A78D;
+  border-radius: 9999px;
+  background-color: #F0F0F0;
+  transition: all 0.3s ease;
 }
 
+nav ul li:hover {
+  transform: translateY(-2px);
+  background-color: #96A78D;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000000;
+}
+
+nav ul li:hover a {
+  color: #F0F0F0;
+}
+
+/* IMG DEFAULT */
 img {
-    max-width: 400px;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
-
-#logoHead img{
-    width: 150px;
-    height: auto;
-}
-
-
-
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -82,7 +116,7 @@ img {
   .col-lg-12 {width: 100%;}
 
   nav img{display: none;}
-  nav ul{display: block;}
+  nav ul{display: flex;}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
