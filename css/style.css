@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +6,10 @@
 
 body {
   font-family: "Poppins", "SUSE Mono", sans-serif;
-  background-color: #D9E9CF;
+  background-color: white;
   color: #000000;
 }
 
-/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
@@ -21,17 +19,16 @@ header {
   border-bottom: 3px solid #96A78D;
   border-radius: 0 0 20px 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
 }
 
-/* LOGO */
-#logoHead img {
-  width: 120px;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+h1 {
+  font-family: 'Dancing Script';
+  font-size: 78px;
+  align-self: center;
 }
 
-/* NAV */
+
 nav ul {
   display: flex;
   gap: 1rem;
@@ -40,7 +37,7 @@ nav ul {
 
 nav ul li {
   border: 1.5px solid #96A78D;
-  border-radius: 9999px;
+  border-radius: 24px;
   background-color: #F0F0F0;
   transition: all 0.3s ease;
 }
@@ -62,10 +59,135 @@ nav ul li:hover a {
   color: #F0F0F0;
 }
 
-/* IMG DEFAULT */
 img {
   max-width: 100%;
   height: auto;
+}
+
+
+/* Contenidor de bombolles animades */
+.product-bubbles {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    font-size: 20px;
+}
+
+/* Estil de cada bombolla: forma circular, color fosc i text centrat */
+.bubble {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #111;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    padding: 20px;
+    font-size: 1em;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Colors diferents per tipus de producte */
+.bubble.blue { border: 3px solid #74c7f0; }
+.bubble.green { border: 3px solid #649b81; }
+.bubble.red { border: 3px solid #c0435c; }
+
+/* Efecte hover de zoom i ombra */
+.bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00ffcc;
+    z-index: 5;
+}
+
+/* Posicions i retards d’animació per a cada bombolla */
+.bubble:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.bubble:nth-child(2) { top: 20%; left: 60%; animation-delay: 1s; }
+.bubble:nth-child(3) { top: 60%; left: 30%; animation-delay: 2s; }
+.bubble:nth-child(4) { top: 50%; left: 80%; animation-delay: 3s; }
+.bubble:nth-child(5) { top: 30%; left: 40%; animation-delay: 4s; }
+.bubble:nth-child(6) { top: 70%; left: 15%; animation-delay: 5s; }
+.bubble:nth-child(7) { top: 10%; left: 75%; animation-delay: 6s; }
+.bubble:nth-child(8) { top: 40%; left: 55%; animation-delay: 2.5s; }
+.bubble:nth-child(9) { top: 25%; left: 20%; animation-delay: 3.5s; }
+.bubble:nth-child(10){ top: 60%; left: 65%; animation-delay: 4.5s; }
+
+
+#slogan {
+  height: 26em;
+  display: flex;
+  justify-content: center;
+  background-color: #B6CEB4;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 6em;
+}
+
+#slogan h2 {
+  font-size: 20px;
+}
+
+#local {
+  display: flex;
+  padding-top: 18em;
+  justify-content: space-between;
+}
+
+#exteriorImg {
+  width: 34em;
+  height: auto;
+}
+
+#comida {
+  display: flex;
+  padding-top: 4em;
+  justify-content: space-between;
+}
+
+h2 {
+  padding: 6em;
+}
+
+#comidaImg {
+  display: flex;
+  width: 38em;
+  height: auto;
+}
+
+footer{
+    text-align: center;
+    padding-top: 12em;
+    padding-bottom: 1em;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: flex-end;
+}
+
+#redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#redes img {
+    width: 40px;
+    height: auto;
+    border: 1px solid #649b81;
+    border-radius: 20%;
+    padding: 8px;
+    margin: 1em;
+}
+
+/* Animació de flotació vertical suau */
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -82,6 +204,21 @@ img {
   .col-sm-10 {width: 83.33%;}
   .col-sm-11 {width: 91.66%;}
   .col-sm-12 {width: 100%;}
+
+  nav ul {
+    display: none;
+  }
+  nav img {
+    display: block;
+    width: 35px;
+    cursor: pointer;
+  }
+
+  .bubble {
+        width: 110px;
+        height: 110px;
+        font-size: 0.8em;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
