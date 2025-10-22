@@ -11,64 +11,72 @@
   </head>
   <body>
     <header>
-        <nav>
-            <img src="./img/menu-hamburger.svg" alt="menuHamburger">
-            <ul>
-                <li><a href="./testPersonalidad.html">人</a></li>
-                <li><a href="./conocenos.html">Conocenos</a></li>
-                <li><a href="./reservas">Reservas</a></li>
+      <nav>
+        <img src="./img/menu-hamburger.svg" alt="menuHamburger">
+        <ul>
+          <li><a href="./testPersonalidad.html" data-i18n="nav.test">人</a></li>
+          <li><a href="./conocenos.html" data-i18n="nav.about">Conocenos</a></li>
+          <li><a href="./reservas" data-i18n="nav.booking">Reservas</a></li>
+        </ul>
+      </nav>
 
-            </ul>
-        </nav>
-        <h1>J人N</h1>
-        <nav>
-            <ul>
-                <li><a href="./menu.html">Menu</a></li>
-                <li><a href="./login">Login</a></li>
-                <!-- <li class="langLi">
-                    <select id="lang" class="langSelect" aria-label="Seleccionar idioma">
-                      <option value="esp">ESP</option>
-                      <option value="cat">CAT</option>
-                      <option value="eng">ENG</option>
-                </li> -->
-            </ul>
-        </nav>
+      <h1>J人N</h1>
+
+      <nav>
+        <ul>
+          <li><a href="./menu.html" data-i18n="nav.menu">Menu</a></li>
+          <li><a href="./login" data-i18n="nav.login">Login</a></li>
+          <li class="langLi">
+            <select id="lang" class="langSelect" aria-label="Seleccionar idioma">
+              <option value="esp">ESP</option>
+              <option value="cat">CAT</option>
+              <option value="eng">ENG</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
     </header>
+
     <main>
-       <section class="product-bubbles">
-                <a href="consoles/consoles1.html" class="bubble green">Tempures</a>
-                <a href="consoles/consoles2.html" class="bubble red">Niguiris</a>
-                <a href="consoles/consoles3.html" class="bubble blue">Ramen</a>
-                <a href="consoles/consoles4.html" class="bubble red">Ensaladas</a>
-                <a href="consoles/consoles5.html" class="bubble green">Makis</a>
-                <a href="accessoris/accessoris1.html" class="bubble green">人</a>
-                <a href="accessoris/accessoris2.html" class="bubble blue">Gyozas</a>
-                <a href="accessoris/accessoris3.html" class="bubble blue">Begudes</a>
-                <a href="accessoris/accessoris4.html" class="bubble red">Menú Especial</a>
-                <a href="accessoris/accessoris5.html" class="bubble green">Menú Infantil</a>
-        </section>
-        <div id="slogan">
-          <h1>Ven a J人N y veras que Ñ人M</h1>
-        </div>
-        <div id="local">
-          <img id="exteriorImg" src="./img/local/localY.png" alt="exteriorLocal">
-          <h2>KLDAKSJCNKJSNCKJSNCJNSJCNOENCIN, JXHABSCHAHBC</h2>
-        </div>
-        <div id="comida">
-          <h2>KLDAKSJCNKJSNCKJSNCJNSJCNOENCIN, JXHABSCHAHBC</h2>
-          <img id="comidaImg" src="./img/comida/maderaSushis.png" alt="maderaSushis">
-        </div>
-        <div id="slogan2">
-          <h2>Sabor autentico en cada 人rroz</h2>
-        </div>
+      <section class="product-bubbles">
+        <a href="consoles/consoles1.html" class="bubble green" data-i18n="bubbles.tempura">Tempures</a>
+        <a href="consoles/consoles2.html" class="bubble red" data-i18n="bubbles.nigiri">Niguiris</a>
+        <a href="consoles/consoles3.html" class="bubble blue" data-i18n="bubbles.ramen">Ramen</a>
+        <a href="consoles/consoles4.html" class="bubble red" data-i18n="bubbles.salads">Ensaladas</a>
+        <a href="consoles/consoles5.html" class="bubble green" data-i18n="bubbles.maki">Makis</a>
+        <a href="accessoris/accessoris1.html" class="bubble green" data-i18n="bubbles.specialChar">人</a>
+        <a href="accessoris/accessoris2.html" class="bubble blue" data-i18n="bubbles.gyoza">Gyozas</a>
+        <a href="accessoris/accessoris3.html" class="bubble blue" data-i18n="bubbles.drinks">Begudes</a>
+        <a href="accessoris/accessoris4.html" class="bubble red" data-i18n="bubbles.special">Menú Especial</a>
+        <a href="accessoris/accessoris5.html" class="bubble green" data-i18n="bubbles.kids">Menú Infantil</a>
+      </section>
+
+      <div id="slogan">
+        <h1 data-i18n="slogans.main">Ven a J人N y veras que Ñ人M</h1>
+      </div>
+
+      <div id="local">
+        <img id="exteriorImg" src="./img/local/localY.png" alt="exteriorLocal">
+        <h2>KLDAKSJCNKJSNCKJSNCJNSJCNOENCIN, JXHABSCHAHBC</h2>
+      </div>
+
+      <div id="comida">
+        <h2>KLDAKSJCNKJSNCKJSNCJNSJCNOENCIN, JXHABSCHAHBC</h2>
+        <img id="comidaImg" src="./img/comida/maderaSushis.png" alt="maderaSushis">
+      </div>
+
+      <div id="slogan2">
+        <h2 data-i18n="slogans.sub">Sabor autentico en cada 人rroz</h2>
+      </div>
     </main>
+
     <footer>
       <div id="redes">
-            <img src="img/twitter-icon.svg" alt="Twitter Logo">
-            <img src="img/facebook-icon.svg" alt="Twitter Facebook">
-            <img src="img/instagram-icon.svg" alt="Twitter Instagram">
-        </div>
-        <p>&copy; J人N S.A</p>
+        <img src="img/twitter-icon.svg" alt="Twitter Logo">
+        <img src="img/facebook-icon.svg" alt="Twitter Facebook">
+        <img src="img/instagram-icon.svg" alt="Twitter Instagram">
+      </div>
+      <p data-i18n="footer.copy">&copy; J人N S.A</p>
     </footer>
   </body>
 </html>

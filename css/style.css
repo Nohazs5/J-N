@@ -64,7 +64,6 @@ img {
   height: auto;
 }
 
-/* Selector de idioma
 .langLi {
   display: flex;
   align-items: center;
@@ -79,7 +78,6 @@ img {
   background-color: #F0F0F0;
   font: inherit;
   font-weight: 600;
-  color: #000;
   padding: 0.5rem 2.2rem 0.5rem 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -88,7 +86,7 @@ img {
 .langSelect:hover {
   background-color: #96A78D;
   color: #F0F0F0;
-} */
+}
 
 /* Contenidor de bombolles animades */
 .product-bubbles {
@@ -167,7 +165,7 @@ img {
 #comida {
   display: flex;
   padding-top: 4em;
-  padding-bottom: 18em;
+  padding-bottom: 12em;
   justify-content: space-between;
 }
 
@@ -182,15 +180,33 @@ h2 {
 }
 
 #slogan2 {
-  height: 22em;
+  position: relative;
+  height: 26em;
   display: flex;
   justify-content: center;
-  background-color: #B6CEB4;
   align-items: center;
   flex-direction: column;
-  font-size: 18px;
-  background-image: url("../img/logo/LogoBuenoRecortado.svg");
+  font-size: 30px;
+  background-image: url("../img/fondoPinte.jpeg");
+  background-size: 10em;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
+
+#slogan2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 0;
+}
+
+#slogan2 h2 {
+  position: relative;
+  z-index: 1;
+}
+
 
 footer{
     text-align: center;
@@ -209,7 +225,7 @@ footer{
 #redes img {
     width: 40px;
     height: auto;
-    border: 1px solid #649b81;
+    border: 2px solid #649b81;
     border-radius: 20%;
     padding: 8px;
     margin: 1em;
