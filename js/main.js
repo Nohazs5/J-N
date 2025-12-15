@@ -1,5 +1,3 @@
-// ./js/main.js
-
 (function () {
   // ===== Diccionario de idiomas =====
   const I18N = {
@@ -239,3 +237,110 @@ Thank you for being part of this experience.`
     init();
   }
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdown = document.getElementById("langDropdown");
+  const btn = document.getElementById("langBtn");
+  const menu = document.getElementById("langMenu");
+
+  const select = document.getElementById("lang"); // el select oculto
+  const btnFlag = document.getElementById("langBtnFlag");
+  const btnText = document.getElementById("langBtnText");
+
+  if (!dropdown || !btn || !menu || !select || !btnFlag || !btnText) return;
+
+  function openMenu() {
+    dropdown.classList.add("open");
+    btn.setAttribute("aria-expanded", "true");
+    menu.focus();
+  }
+
+  function closeMenu() {
+    dropdown.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
+  }
+
+  function setLang(value, flagPath) {
+    // 1) Actualiza UI
+    btnText.textContent = value.toUpperCase();
+    btnFlag.src = flagPath;
+
+    // 2) Actualiza el select oculto (para compatibilidad con tu i18n)
+    select.value = value;
+
+    // 3) Dispara el change por si tu i18n escucha ese evento
+    select.dispatchEvent(new Event("change", { bubbles: true }));
+
+    // 4) Marca selected en el menú
+    [...menu.querySelectorAll("li[data-lang]")].forEach(li => {
+      li.setAttribute("aria-selected", li.dataset.lang === value ? "true" : "false");
+    });
+
+    closeMenu();
+  }
+
+  // Toggle
+  btn.addEventListener("click", () => {
+    dropdown.classList.contains("open") ? closeMenu() : openMenu();
+  });
+
+  // Click opción
+  menu.addEventListener("click", (e) => {
+    const li = e.target.closest("li[data-lang]");
+    if (!li) return;
+    setLang(li.dataset.lang, li.dataset.flag);
+  });
+
+  // Teclado (Enter/Espacio sobre opción)
+  menu.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeMenu();
+      btn.focus();
+    }
+    if (e.key === "Enter" || e.key === " ") {
+      const li = document.activeElement?.closest?.("li[data-lang]");
+      if (!li) return;
+      e.preventDefault();
+      setLang(li.dataset.lang, li.dataset.flag);
+    }
+  });
+
+  // Cerrar al click fuera
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) closeMenu();
+  });
+
+  // Inicializa según el valor actual del select (por si lo cargas guardado)
+  const current = select.value || "esp";
+  const currentLi = menu.querySelector(`li[data-lang="${current}"]`);
+  if (currentLi) setLang(current, currentLi.dataset.flag);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("hamburguer");
+  const menu = document.getElementById("mobileMenu");
+
+  if (!btn || !menu) return;
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.classList.toggle("open");
+  });
+
+  // Cierra al hacer click en un enlace
+  menu.addEventListener("click", (e) => {
+    if (e.target.closest("a")) menu.classList.remove("open");
+  });
+
+  // Cierra al click fuera
+  document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target) && e.target !== btn) {
+      menu.classList.remove("open");
+    }
+  });
+
+  // ESC para cerrar
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") menu.classList.remove("open");
+  });
+});

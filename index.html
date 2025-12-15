@@ -5,33 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>J人N</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
     <link rel="shorticon" href="./img/logo/LogoBuenoRecortado2.png" type="image/x-icon" />
     <link href="./fonts/google_fonts.css" rel="stylesheet" />
   </head>
   <body>
     <header>
-      <nav>
-        <img src="./img/menu-hamburger.svg" alt="menuHamburger">
-        <ul>
+      <nav class="navLeft">
+        <img src="./img/menu-hamburger.svg" alt="menuHamburger" id="hamburguer">
+        <ul id="mobileMenu">
           <li><a href="./人/testPersonalidad.html" data-i18n="nav.test">人</a></li>
           <li><a href="./conocenos.html" data-i18n="nav.about">Conocenos</a></li>
           <li><a href="./reservas.html" data-i18n="nav.booking">Reservas</a></li>
         </ul>
       </nav>
-
-      <h1>J人N</h1>
+      
+      <a href="../index.html" class="logoLink">
+        J人N
+      </a>
 
       <nav>
         <ul>
           <li><a href="./menu/menu.html" data-i18n="nav.menu">Menu</a></li>
           <li><a href="./login.html" data-i18n="nav.login">Login</a></li>
           <li class="langLi">
-            <select id="lang" class="langSelect" aria-label="Seleccionar idioma">
+            <select id="lang" class="langSelect sr-only" aria-label="Seleccionar idioma">
               <option value="esp">ESP</option>
               <option value="cat">CAT</option>
               <option value="eng">ENG</option>
             </select>
+
+            <div class="lang-dropdown" id="langDropdown">
+              <button type="button" class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+                <img id="langBtnFlag" src="./img/flags/esp.svg" alt="Español" />
+                <span id="langBtnText">ESP</span>
+                <span class="chev">▾</span>
+              </button>
+
+              <ul class="lang-menu" id="langMenu" role="listbox" tabindex="-1" aria-label="Seleccionar idioma">
+                <li role="option" tabindex="0" data-lang="esp" data-flag="./img/flags/esp.svg" aria-selected="true">
+                  <img src="./img/flags/esp.png" alt="espanol" />
+                  <span>ESP</span>
+                </li>
+                <li role="option" tabindex="0" data-lang="cat" data-flag="./img/flags/cat.svg" aria-selected="false">
+                  <img src="./img/flags/cat.png" alt="catalan" />
+                  <span>CAT</span>
+                </li>
+                <li role="option" tabindex="0" data-lang="eng" data-flag="./img/flags/gb.svg" aria-selected="false">
+                  <img src="./img/flags/eng.png" alt="ingles" />
+                  <span>ENG</span>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </nav>
@@ -68,13 +93,13 @@
       </div>
 
       <div id="comida">
+        <img id="comidaImg" src="./img/comida/platoSushi.jpeg" alt="platoSushis">
         <h2 data-i18n="texts.food"> 
         En <b>J人N</b> creemos que el sushi es más que comida: <b>es un arte</b>. <br> 
         <br>
         Cada pieza que servimos combina tradición, técnica y una selección cuidadosa de ingredientes frescos. 
         Nuestro objetivo es que cada bocado te transporte a Japón, para que descubras sabores auténticos y una presentación que celebra la cultura japonesa.
         </h2>
-        <img id="comidaImg" src="./img/comida/platoSushi.jpeg" alt="platoSushis">
       </div>
       <hr>
       <div id="slogan2">
