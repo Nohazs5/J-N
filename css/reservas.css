@@ -1,0 +1,104 @@
+/* ===== Reservas page ===== */
+
+.content-page {
+  width: min(900px, 92%);
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.content-page > h2 {
+  padding: 0;
+  margin: 2rem 0 1.25rem;
+  text-align: center;
+  font-size: clamp(30px, 4.5vw, 52px);
+  font-family: "Caveat", "Poppins", sans-serif;
+}
+
+/* Form card */
+.res-form {
+  background: #ffffff;
+  border: 1.5px solid #96A78D;
+  border-radius: 22px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+/* Label layout */
+.res-form label {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.res-form label span {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Inputs */
+.res-form input,
+.res-form textarea {
+  border: 1.5px solid #96A78D;
+  border-radius: 14px;
+  padding: 0.85rem 0.9rem;
+  font: inherit;
+  background: #F0F0F0;
+  outline: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.res-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.res-form input:focus,
+.res-form textarea:focus {
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(150, 167, 141, 0.25);
+}
+
+/* Button */
+.res-form button {
+  margin-top: 0.25rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.95rem 1.1rem;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  background: linear-gradient(90deg, #96A78D, #B6CEB4);
+  color: #000;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.res-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.10);
+  filter: saturate(1.05);
+}
+
+/* OK message */
+#mensajeOK {
+  background: #B6CEB4;
+  border: 1.5px solid #96A78D;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  width: fit-content;
+  margin: 1.25rem auto 0;
+  font-weight: 800;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .content-page {
+    padding: 1.5rem 0 3rem;
+  }
+
+  .res-form {
+    padding: 1.2rem;
+  }
+}

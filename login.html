@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - J人N</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link href="./fonts/google_fonts.css" rel="stylesheet" />
+    <script src="./js/main.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img src="./img/menu-hamburger.svg" alt="menuHamburger" />
+        <ul>
+          <li><a href="./人/testPersonalidad.html">人</a></li>
+          <li><a href="./conocenos.html">Conócenos</a></li>
+          <li><a href="./reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+
+      <h1>J人N</h1>
+
+      <nav>
+        <ul>
+          <li><a href="./menu/menu.html">Menu</a></li>
+          <li><a href="./login.html">Login</a></li>
+          <li class="langLi">
+            <select id="lang" class="langSelect" aria-label="Seleccionar idioma">
+              <option value="esp">ESP</option>
+              <option value="cat">CAT</option>
+              <option value="eng">ENG</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="login-page">
+      <section class="login-card">
+        <div class="login-head">
+          <h2>Accede a tu cuenta</h2>
+          <p>Gestiona reservas, favoritos y menús especiales.</p>
+        </div>
+
+        <form class="login-form">
+          <label>
+            <span>Email</span>
+            <input type="email" placeholder="tu@email.com" required />
+          </label>
+
+          <label>
+            <span>Contraseña</span>
+            <input type="password" placeholder="••••••••" required />
+          </label>
+
+          <button type="submit">Entrar</button>
+
+          <div class="login-links">
+            <a href="#" class="muted">¿Olvidaste tu contraseña?</a>
+            <a href="#" class="muted">Crear cuenta</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div id="redes">
+        <img src="./img/twitter-icon.svg" alt="Twitter Logo" />
+        <img src="./img/facebook-icon.svg" alt="Facebook Logo" />
+        <img src="./img/instagram-icon.svg" alt="Instagram Logo" />
+      </div>
+      <p>&copy; J人N S.A</p>
+    </footer>
+  </body>
+</html>

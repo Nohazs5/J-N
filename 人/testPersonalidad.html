@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test de Personalidad - J人N</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/testPersonalidad.css" />
+    <link href="../fonts/google_fonts.css" rel="stylesheet" />
+    <script src="../js/main.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img src="../img/menu-hamburger.svg" alt="menuHamburger" />
+        <ul>
+          <li><a href="./testPersonalidad.html">人</a></li>
+          <li><a href="../conocenos.html">Conócenos</a></li>
+          <li><a href="../reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+
+      <h1>J人N</h1>
+
+      <nav>
+        <ul>
+          <li><a href="../menu/menu.html">Menu</a></li>
+          <li><a href="../login.html">Login</a></li>
+          <li class="langLi">
+            <select id="lang" class="langSelect" aria-label="Seleccionar idioma">
+              <option value="esp">ESP</option>
+              <option value="cat">CAT</option>
+              <option value="eng">ENG</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="test-page">
+      <section class="test-hero">
+        <h2>Test de personalidad (10 preguntas)</h2>
+        <p>Responde rápido (A/B/C/D). Al final te damos tu recomendación de menú.</p>
+      </section>
+
+      <form id="quizForm" class="quiz-card">
+        <!-- Preguntas -->
+        <fieldset class="q">
+          <legend>1) Cuál de estas tres características define mejor tu personalidad:</legend>
+          <label><input type="radio" name="q1" value="A" required /> A) Alegre, creativo y activo</label>
+          <label><input type="radio" name="q1" value="B" /> B) Fuerte, valiente y buen líder</label>
+          <label><input type="radio" name="q1" value="C" /> C) Familiar, solidario y perseverante</label>
+          <label><input type="radio" name="q1" value="D" /> D) Observador, metódico y ágil</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>2) Si te ofrecen un puesto de trabajo en el que ganarás más pero es fuera de tu ciudad tú:</legend>
+          <label><input type="radio" name="q2" value="A" required /> A) Lo meditas con tu familia o seres queridos y decides lo mejor para todos</label>
+          <label><input type="radio" name="q2" value="B" /> B) Aceptas sin pensar, el que no arriesga no gana</label>
+          <label><input type="radio" name="q2" value="C" /> C) Estudias la situación calma, evaluando pros y contras y te tomas tu tiempo para decidir sin prisas</label>
+          <label><input type="radio" name="q2" value="D" /> D) Piensas en cuánto ganarás, si vale la pena vas a por ello pero si el esfuerzo es demasiado prefieres concentrar tus energías en algo mejor</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>3) ¿Qué tipo de deporte prefieres?</legend>
+          <label><input type="radio" name="q3" value="A" required /> A) Correr, disfruto mucho el running</label>
+          <label><input type="radio" name="q3" value="B" /> B) Las actividades variadas: bailar, aeróbics, nadar, etc.</label>
+          <label><input type="radio" name="q3" value="C" /> C) Los ejercicios de agilidad física que reten mis capacidades</label>
+          <label><input type="radio" name="q3" value="D" /> D) Caminar con tranquilidad, no soy muy amigo del deporte</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>4) A nivel social te consideras alguien:</legend>
+          <label><input type="radio" name="q4" value="A" required /> A) Muy social, me encanta compartir con mis amigos siempre que puedo</label>
+          <label><input type="radio" name="q4" value="B" /> B) Tengo amigos, pero soy alguien bastante selectivo y no simpatizo con todos</label>
+          <label><input type="radio" name="q4" value="C" /> C) Me gusta estar con amigos, pero prefiero pasar mi tiempo libre en familia</label>
+          <label><input type="radio" name="q4" value="D" /> D) Soy más bien del tipo solitario</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>5) Al momento de viajar, qué tipo de destinos prefieres:</legend>
+          <label><input type="radio" name="q5" value="A" required /> A) La playa y los sitios de calor siempre que puedo</label>
+          <label><input type="radio" name="q5" value="B" /> B) Los viajes a la montaña son lo que más disfruto</label>
+          <label><input type="radio" name="q5" value="C" /> C) Los destinos naturales exóticos a los que no todos llegan</label>
+          <label><input type="radio" name="q5" value="D" /> D) Todo menos playas, ríos o lagunas, ese tipo de destinos no me van</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>6) Si alguien se mete contigo tú:</legend>
+          <label><input type="radio" name="q6" value="A" required /> A) Sacas las garras enseguida, nadie se mete contigo</label>
+          <label><input type="radio" name="q6" value="B" /> B) Te burlas del otro y lo haces quedar en ridículo</label>
+          <label><input type="radio" name="q6" value="C" /> C) Evalúas la situación y solo si es necesario te defiendes, sino pasas de largo</label>
+          <label><input type="radio" name="q6" value="D" /> D) Ágilmente esquivas sus agresiones y das la vuelta a la situación para hacer quedar mal al otro.</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>7) Si para comer solo puedes elegir un tipo de alimento sería:</legend>
+          <label><input type="radio" name="q7" value="A" required /> A) Carne siempre que puedas, no sabrías vivir sin ella</label>
+          <label><input type="radio" name="q7" value="B" /> B) Frutas ¡te encanta su frescura!</label>
+          <label><input type="radio" name="q7" value="C" /> C) Los vegetales, deliciosos y sanos</label>
+          <label><input type="radio" name="q7" value="D" /> D) Pescado, los productos del mar te vuelven loco</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>8) En tus relaciones de pareja una de las cosas que más te importa es:</legend>
+          <label><input type="radio" name="q8" value="A" required /> A) El sexo, el aspecto físico es muy importante</label>
+          <label><input type="radio" name="q8" value="B" /> B) Compenetrarte a fondo, los lazos familiares son básicos</label>
+          <label><input type="radio" name="q8" value="C" /> C) Compartir pero que respeten tu espacio, no te gusta que te invadan ni perder la independencia</label>
+          <label><input type="radio" name="q8" value="D" /> D) No eres alguien de relaciones, prefieres lo ocasional</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>9) ¿Te consideras alguien familiar?</legend>
+          <label><input type="radio" name="q9" value="A" required /> A) Sí, mucho. La familia es lo más importante para mí</label>
+          <label><input type="radio" name="q9" value="B" /> B) Me importa mi familia, pero no exagero pasando demasiado tiempo con ellos</label>
+          <label><input type="radio" name="q9" value="C" /> C) Si estoy con ellos me lo paso bien, pero me gusta mucho la soledad y la independencia</label>
+          <label><input type="radio" name="q9" value="D" /> D) No soy familiar en lo absoluto</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>10) La casa de tus sueños está en:</legend>
+          <label><input type="radio" name="q10" value="A" required /> A) En un paraje natural aislado del mundo urbano</label>
+          <label><input type="radio" name="q10" value="B" /> B) En la ciudad, no podrías vivir sin ese loco ajetreo urbano</label>
+          <label><input type="radio" name="q10" value="C" /> C) En la playa o en una ciudad de clima cálido y templado</label>
+          <label><input type="radio" name="q10" value="D" /> D) En una ciudad pequeña y acogedora con todo a tu alcance</label>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" id="btnSend">Ver mi menú</button>
+          <button type="button" class="secondary" id="btnReset">Reiniciar</button>
+        </div>
+      </form>
+
+      <section id="result" class="result-card" hidden>
+        <h3>Tu resultado</h3>
+        <p class="big" id="resultType">—</p>
+        <p id="resultMsg">—</p>
+
+        <div class="result-actions">
+          <a class="go-menu" id="goMenu" href="../menu/menu.html">Ir al menú</a>
+          <button class="secondary" id="btnRetry">Repetir test</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div id="redes">
+        <img src="../img/twitter-icon.svg" alt="Twitter Logo" />
+        <img src="../img/facebook-icon.svg" alt="Facebook Logo" />
+        <img src="../img/instagram-icon.svg" alt="Instagram Logo" />
+      </div>
+      <p>&copy; J人N S.A</p>
+    </footer>
+
+    <script>
+      // Cambia esto a la URL real donde corre Flask (ej: http://127.0.0.1:5000)
+      const API_BASE = "http://127.0.0.1:5000";
+      const ENDPOINT = `${API_BASE}/MenuPersonalitat`;
+
+      const form = document.getElementById("quizForm");
+      const result = document.getElementById("result");
+      const resultType = document.getElementById("resultType");
+      const resultMsg = document.getElementById("resultMsg");
+      const goMenu = document.getElementById("goMenu");
+
+      const btnReset = document.getElementById("btnReset");
+      const btnRetry = document.getElementById("btnRetry");
+
+      function collectAnswers() {
+        const answers = [];
+        for (let i = 1; i <= 10; i++) {
+          const checked = document.querySelector(`input[name="q${i}"]:checked`);
+          if (!checked) return null;
+          answers.push(checked.value);
+        }
+        return answers;
+      }
+
+      function menuLinkByType(type) {
+        // Ajusta las rutas si tú tienes otras páginas
+        const map = {
+          Ramen: "../comida/ramen.html",
+          Nigiris: "../comida/niguiris.html",
+          Tempuras: "../comida/tempures.html",
+          Ensaladas: "../comida/ensaladas.html",
+          Gyoza: "../comida/gyozas.html",
+          Bebida: "../bebida/bebidas.html",
+          // si no existe página, vuelve al menú general:
+          Poke: "../menu/menu.html",
+          Tartar: "../menu/menu.html",
+          Hossomaki: "../menu/menu.html",
+          Onigiri: "../menu/menu.html",
+          Arroces: "../menu/menu.html",
+          Wok: "../menu/menu.html",
+          Carpaccio: "../menu/menu.html",
+          Especial: "../menu/menuEspecial.html",
+          "Menú infantil": "../menu/menuInfantil.html"
+        };
+        return map[type] || "../menu/menu.html";
+      }
+
+      function showResult(type, msg) {
+        resultType.textContent = type;
+        resultMsg.textContent = msg;
+        goMenu.href = menuLinkByType(type);
+
+        result.hidden = false;
+        result.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function resetAll() {
+        form.reset();
+        result.hidden = true;
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const answers = collectAnswers();
+        if (!answers || answers.length !== 10) {
+          alert("Responde las 10 preguntas 🙂");
+          return;
+        }
+
+        try {
+          const res = await fetch(ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ respuestas: answers })
+          });
+
+          const data = await res.json();
+
+          if (!res.ok) {
+            alert(data?.error || "Error al enviar el test");
+            return;
+          }
+
+          showResult(data.sushi, data.mensaje);
+        } catch (err) {
+          console.error(err);
+          alert("No se pudo conectar con la API. ¿Está Flask encendido y la URL es correcta?");
+        }
+      });
+
+      btnReset.addEventListener("click", resetAll);
+      btnRetry.addEventListener("click", resetAll);
+    </script>
+  </body>
+</html>

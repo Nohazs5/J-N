@@ -1,0 +1,166 @@
+.test-page {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.test-hero {
+  background: linear-gradient(90deg, #96A78D, #B6CEB4);
+  border: 2px solid #96A78D;
+  border-radius: 22px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  padding: 2.2rem 1.4rem;
+  margin: 2rem 0 1.6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.test-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.test-hero h2 {
+  padding: 0;
+  margin: 0 0 0.35rem;
+  font-size: clamp(30px, 4.5vw, 54px);
+  font-family: "Caveat", "Poppins", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.test-hero p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.quiz-card {
+  background: #ffffff;
+  border: 1.5px solid #96A78D;
+  border-radius: 22px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  padding: 1.4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.q {
+  border: 1.5px solid #96A78D;
+  border-radius: 18px;
+  padding: 1rem;
+  background: #F0F0F0;
+}
+
+.q legend {
+  font-weight: 900;
+  padding: 0 0.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.q label {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 0.35rem 0.4rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.q label:hover {
+  background: rgba(150, 167, 141, 0.18);
+}
+
+.actions {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 0.2rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.95rem 1.1rem;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  background: linear-gradient(90deg, #96A78D, #B6CEB4);
+  color: #000;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.10);
+}
+
+button.secondary {
+  background: #F0F0F0;
+  border: 1.5px solid #96A78D;
+  box-shadow: none;
+}
+
+.result-card {
+  margin-top: 1.6rem;
+  background: #ffffff;
+  border: 2px solid #96A78D;
+  border-radius: 22px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  padding: 1.4rem;
+  text-align: center;
+}
+
+.result-card h3 {
+  margin: 0 0 0.6rem;
+}
+
+.result-card .big {
+  font-size: clamp(26px, 4vw, 44px);
+  font-family: "Caveat", "Poppins", sans-serif;
+  margin: 0.2rem 0 0.4rem;
+  font-weight: 900;
+}
+
+.result-actions {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.go-menu {
+  text-decoration: none;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 0.95rem 1.1rem;
+  background: linear-gradient(90deg, #96A78D, #B6CEB4);
+  color: #000;
+  border: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.go-menu:hover {
+  transform: translateY(-2px);
+  display: inline-block;
+}
+
+@media (max-width: 991px) {
+  .test-page {
+    padding: 1.5rem 0 3rem;
+  }
+  .test-hero p {
+    font-size: 16px;
+  }
+}

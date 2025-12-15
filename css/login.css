@@ -1,0 +1,123 @@
+.login-page {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+  display: grid;
+  place-items: center;
+}
+
+.login-card {
+  width: min(520px, 100%);
+  background: #ffffff;
+  border: 1.5px solid #96A78D;
+  border-radius: 22px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.login-head {
+  background: linear-gradient(90deg, #96A78D, #B6CEB4);
+  border-bottom: 1.5px solid #96A78D;
+  padding: 1.6rem 1.4rem;
+  position: relative;
+}
+
+.login-head::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.login-head h2 {
+  padding: 0;
+  margin: 0 0 0.35rem;
+  font-size: clamp(28px, 4vw, 40px);
+  font-family: "Caveat", "Poppins", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.login-head p {
+  margin: 0;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.login-form {
+  padding: 1.4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.login-form label {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.login-form span {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.login-form input {
+  border: 1.5px solid #96A78D;
+  border-radius: 14px;
+  padding: 0.85rem 0.9rem;
+  font: inherit;
+  background: #F0F0F0;
+  outline: none;
+}
+
+.login-form input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(150, 167, 141, 0.25);
+}
+
+.login-form button {
+  margin-top: 0.2rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.95rem 1.1rem;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  background: linear-gradient(90deg, #96A78D, #B6CEB4);
+  color: #000;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.10);
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.login-links a.muted {
+  color: #111;
+  opacity: 0.8;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.login-links a.muted:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .login-page {
+    padding: 1.5rem 0 3rem;
+  }
+}

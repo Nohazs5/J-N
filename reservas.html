@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title data-i18n="reservas.page.title">Reservas</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/reservas.css">
+        <link href="./fonts/google_fonts.css" rel="stylesheet" />
+        <script src="./js/main.js"></script>
+    </head>
+    <body>
+
+    <header>
+        <nav>
+            <img src="./img/menu-hamburger.svg" alt="menuHamburger">
+                <ul>
+                    <li><a href="./人/testPersonalidad.html" data-i18n="nav.test">人</a></li>
+                    <li><a href="./conocenos.html" data-i18n="nav.about">Conócenos</a></li>
+                    <li><a href="./reservas.html" data-i18n="nav.booking">Reservas</a></li>
+                </ul>
+        </nav>
+
+        <h1>J人N</h1>
+
+        <nav>
+            <ul>
+                <li><a href="./menu/menu.html" data-i18n="nav.menu">Menu</a></li>
+                <li><a href="./login.html" data-i18n="nav.login">Login</a></li>
+
+                <li class="langLi">
+                    <select id="lang" class="langSelect">
+                    <option value="esp">ESP</option>
+                    <option value="cat">CAT</option>
+                    <option value="eng">ENG</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-page">
+
+        <h2 data-i18n="reservas.page.title">Reservas</h2>
+
+        <form id="formReserva" class="res-form">
+
+            <label>
+                <span data-i18n="reservas.form.name">Nombre</span>
+                <input type="text" required data-i18n-placeholder="reservas.form.name">
+            </label>
+
+            <label>
+                <span data-i18n="reservas.form.people">Número de personas</span>
+                <input type="number" min="1" required data-i18n-placeholder="reservas.form.people">
+            </label>
+
+            <label>
+                <span data-i18n="reservas.form.date">Fecha</span>
+                <input type="date" required>
+            </label>
+
+            <label>
+                <span data-i18n="reservas.form.time">Hora</span>
+                <input type="time" required>
+            </label>
+
+            <label>
+                <span data-i18n="reservas.form.comments">Comentarios</span>
+                <textarea data-i18n-placeholder="reservas.form.comments"></textarea>
+            </label>
+
+            <button type="submit" data-i18n="reservas.form.submit">Confirmar reserva</button>
+
+        </form>
+
+        <p id="mensajeOK" style="display:none; margin-top:20px;" data-i18n="reservas.confirmation.ok">
+            ¡Reserva enviada correctamente!
+        </p>
+
+    </main>
+
+    <footer>
+        <p data-i18n="footer.copy">© J人N S.A</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("formReserva");
+        const msg = document.getElementById("mensajeOK");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            msg.style.display = "block";
+            form.reset();
+        });
+    </script>
+
+    </body>
+</html>

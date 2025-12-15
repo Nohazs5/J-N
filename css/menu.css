@@ -1,0 +1,199 @@
+.menu-page {
+  width: min(1150px, 92%);
+  margin: 0 auto;
+  padding-top: 3.2rem;
+  padding-bottom: 4.5rem;
+}
+
+.menu-section {
+  margin: 0 0 3.2rem;
+}
+
+.section-title {
+  padding: 0;
+  margin: 0 0 1.2rem;     /* espacio debajo del título */
+  font-size: 26px;
+  font-family: "Caveat", "Poppins", sans-serif;
+
+  /* separador elegante */
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.section-title::after {
+  content: "";
+  height: 3px;
+  flex: 1;
+  background: #B6CEB4;
+  border-radius: 999px;
+}
+
+/* Hero */
+.menu-hero {
+  background: linear-gradient(90deg, #96A78D, #B6CEB4);
+  border: 2px solid #96A78D;
+  border-radius: 22px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  padding: 2.2rem 1.4rem;
+  margin: 2rem 0 1.8rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.menu-hero h2 {
+  padding: 0;
+  margin: 0 0 0.35rem;
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-family: "Caveat", "Poppins", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-hero p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Categories */
+.menu-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.cat {
+  text-decoration: none;
+  font-weight: 900;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: #F0F0F0;
+  border: 1.5px solid #96A78D;
+  color: #000;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.cat:hover {
+  transform: translateY(-2px);
+  background: #96A78D;
+  color: #F0F0F0;
+}
+
+.cat.blue { box-shadow: inset 0 0 0 2px #74c7f0; }
+.cat.green { box-shadow: inset 0 0 0 2px #649b81; }
+.cat.red { box-shadow: inset 0 0 0 2px #c0435c; }
+
+/* Grid items */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.item {
+  background: #ffffff;
+  border: 1.5px solid #96A78D;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem 1.5rem 1.4rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.10);
+}
+
+.item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.8rem;
+}
+
+.item h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.price {
+  font-weight: 900;
+  background: #B6CEB4;
+  border: 1.5px solid #96A78D;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.item p {
+  margin: 0.8rem 0 1.1rem;
+  line-height: 1.65;
+  color: #111;
+}
+
+.tag {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 13px;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  border: 1.5px solid #96A78D;
+  background: #F0F0F0;
+}
+
+.tag.blue { box-shadow: inset 0 0 0 2px #74c7f0; }
+.tag.green { box-shadow: inset 0 0 0 2px #649b81; }
+.tag.red { box-shadow: inset 0 0 0 2px #c0435c; }
+
+/* Responsive */
+@media (max-width: 991px) {
+  .menu-page {
+    padding-top: 1.6rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .menu-hero p {
+    font-size: 16px;
+  }
+
+  .menu-section {
+  margin-bottom: 2.4rem;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+  padding: 0;
+  font-size: 24px;
+  font-family: "Caveat", "Poppins", sans-serif;
+}
+
+.item {
+    padding: 1.3rem;
+}
+
+@media (max-width: 991px) {
+  .menu-section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+}

@@ -7,8 +7,10 @@
 body {
   font-family: "Poppins", "SUSE Mono", sans-serif;
   background-color: white;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
   color: #000000;
 }
+
 
 header {
   display: flex;
@@ -21,7 +23,7 @@ header {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-size: 20px;
 }
-
+ 
 h1 {
   font-family: 'Dancing Script';
   font-size: 78px;
@@ -193,19 +195,30 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
+  font-family: "Caveat";
 }
 
 #slogan2::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
   z-index: 0;
 }
+
+hr {
+  border: none;
+  height: 6px;
+  background: #B6CEB4;
+  border-radius: 3px;
+}
+
 
 #slogan2 h2 {
   position: relative;
   z-index: 1;
+  font-size: 86px;
+  padding: 0px;
 }
 
 
@@ -274,6 +287,40 @@ footer{
         height: 110px;
         font-size: 0.8em;
     }
+  
+     #local, #comida {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  h2 {
+    padding: 1.5rem;
+    font-size: 18px;
+  }
+
+  #slogan, #slogan2 {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  #slogan h1 {
+    font-size: 36px;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  #slogan2 h2 {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  #exteriorImg, #comidaImg {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

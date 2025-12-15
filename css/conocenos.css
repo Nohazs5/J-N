@@ -1,0 +1,190 @@
+/* ===== Conócenos page ===== */
+
+.conocenos-page {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(90deg, #96A78D, #B6CEB4);
+  border: 2px solid #96A78D;
+  border-radius: 22px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  padding: 3rem 1.5rem;
+  margin: 2rem 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero h2 {
+  padding: 0;
+  font-size: clamp(34px, 4.6vw, 58px);
+  font-family: "Caveat", "Poppins", sans-serif;
+  margin-bottom: 0.6rem;
+}
+
+.hero p {
+  font-size: clamp(16px, 2vw, 20px);
+  max-width: 56ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* TIMELINE */
+.timeline {
+  display: grid;
+  gap: 1rem;
+  margin: 0 0 3rem;
+}
+
+.timeline-item {
+  background: #ffffff;
+  border: 1.5px solid #96A78D;
+  border-radius: 18px;
+  padding: 1.25rem 1.25rem 1.35rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-item time {
+  display: inline-block;
+  background: #B6CEB4;
+  border: 1.5px solid #96A78D;
+  color: #000;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.65rem;
+}
+
+.timeline-item h3 {
+  font-size: 22px;
+  margin: 0 0 0.4rem;
+}
+
+.timeline-item p {
+  margin: 0;
+  line-height: 1.65;
+  font-size: 17px;
+  color: #111;
+}
+
+/* TEAM */
+.team {
+  margin: 0 0 2.75rem;
+}
+
+.team h2 {
+  padding: 0;
+  margin: 0 0 1.25rem;
+  font-size: clamp(30px, 4vw, 46px);
+  font-family: "Caveat", "Poppins", sans-serif;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.team .card {
+  background: #ffffff;
+  border: 1.5px solid #96A78D;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.10);
+}
+
+.team .card img {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1.5px solid #96A78D;
+}
+
+.team .card h4 {
+  margin: 0.85rem 0 0.35rem;
+  font-size: 22px;
+}
+
+.team .card p {
+  margin: 0;
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+/* VALUES */
+.values {
+  background: #F0F0F0;
+  border: 1.5px solid #96A78D;
+  border-radius: 18px;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.values h3 {
+  margin: 0 0 0.75rem;
+  font-size: 24px;
+}
+
+.values ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.values li {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .conocenos-page {
+    padding: 1.5rem 0 3rem;
+  }
+
+  .hero {
+    margin-top: 1.25rem;
+    padding: 2.25rem 1rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team .card img {
+    height: 220px;
+  }
+
+  .timeline-item p,
+  .team .card p,
+  .values li {
+    font-size: 16px;
+  }
+}
